@@ -37,10 +37,10 @@ function extimg($img){
 }
 
 
-function action($size, $name, $tmp){
-   $this->file_size = $size;
-   $this->file_name = $name;
-   $this->file_tmp = $tmp;
+function action(){
+   $this->file_size = $_FILES['file']['size'];
+   $this->file_name = $_FILES['file']['name'];
+   $this->file_tmp = $_FILES['file']['tmp_name'];
            if($this->file_size > $this->maxSize){
          echo "$this->file_name is too large";
         }elseif(! in_array(pathinfo($this->file_name, PATHINFO_EXTENSION), $this->extension)){

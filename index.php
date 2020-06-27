@@ -8,7 +8,7 @@
    <body>
     <div class="container">
       <form action="index.php" method="POST" enctype="multipart/form-data">
-         <input type="file" name="file[]" multiple="multiple" />
+         <input type="file" name="file" multiple="multiple" />
          <input type="submit" name="submit" class="button"/>
       </form>
       </div>
@@ -29,17 +29,13 @@
       
       if(isset($_FILES['file'])){
 
-      //for multiple upload
-      for($i = 0; $i < count($_FILES['file']['name']); $i++){
-        $file_name = $_FILES['file']['name'][$i];
-        $file_size = $_FILES['file']['size'][$i];
-        $file_tmp = $_FILES['file']['tmp_name'][$i];
-        $file_type= $_FILES['file']['type'][$i];
-
-       $Uplaod->action($file_size, $file_name, $file_tmp);
 
 
-   }
+
+       $Uplaod->action($file);
+
+
+ 
        }
 ?>
 <!-- php code above -->
