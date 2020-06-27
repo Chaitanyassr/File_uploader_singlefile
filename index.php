@@ -32,7 +32,7 @@
 
 
 
-       $Uplaod->action($file);
+       $Uplaod->action();
 
 
  
