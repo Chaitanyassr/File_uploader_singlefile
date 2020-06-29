@@ -1,2 +1,3 @@
-# FileUploader.
-A Php File uploader, OOP where we cann only modal and set path to upload directory.
+# FileUploader for single file.
+
+for multiple file - https://github.com/Chaitanyassr/easy-file-uploader
